@@ -13,7 +13,7 @@
 
 ### ✅ 安装依赖到 taro-app
 ```bash
-pnpm --filter taro-app add koa
+pnpm --filter web add koa
 ```
 
 ### ❌ 错误写法（不要进入子目录执行）
