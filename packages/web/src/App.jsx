@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { HashRouter as Router } from "react-router-dom";
+import RouterContent from "./routers";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>12</>;
+  return (
+    <Router>
+      <RouterContent />
+    </Router>
+  );
 }
 
 export default App;
