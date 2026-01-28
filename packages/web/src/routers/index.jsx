@@ -1,12 +1,21 @@
 import { Routes, Route } from "react-router-dom";
-import defaultRoutes from "./routes.js";
+import defaultRoutes from "./routes.jsx";
+
+const renderRoute = (route) => {
+  if (route.children) {
+    return (
+      <Route key={route.path} path={route.path} element={route.element}>
+        {route.children.map((childRoute) => renderRoute(childRoute))}
+      </Route>
+    );
+  }
+  return <Route key={route.path} path={route.path} element={route.element} />;
+};
 
 export default () => {
   return (
     <Routes>
-      {[...defaultRoutes].map((route) => (
-        <Route path={route.path} key={route.path} element={route.component} />
-      ))}
+      {defaultRoutes.map((route) => renderRoute(route))}
     </Routes>
   );
 };

@@ -25,8 +25,7 @@ pnpm add koa   # ❌ 会污染 workspace
 ### ✅ 删除依赖
 ```bash
 pnpm --filter node-server remove koa
-```
-
+``` 
 ---
 
 ## 📌 为什么不能进入 node-server 执行安装？

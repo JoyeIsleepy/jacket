@@ -1,9 +1,10 @@
 /* src/index.scss */
+@use "./reset.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-// 结合 SCSS 特性使用
+ 
 $primary: #165dff;
 .btn-custom {
   @apply px-4 py-2 rounded;
